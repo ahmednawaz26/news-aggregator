@@ -1,41 +1,25 @@
+# Stage 1: Build the application
 FROM node:18-alpine as BUILD_IMAGE
-WORKDIR /app/react-app
+WORKDIR /app
 
-# copy package.json
-COPY package.json .
+# Copy package.json and install dependencies
+COPY package.json package-lock.json ./
+RUN npm ci
 
-# install all our packages
-RUN npm install
-
-# copy all our remaining files
+# Copy the rest of the application
 COPY . .
 
-# Finally build our project
+# Build the application
 RUN npm run build
 
+# Stage 2: Serve the application using a web server
+FROM nginx:alpine as PRODUCTION_IMAGE
+WORKDIR /usr/share/nginx/html
 
-# Here, we are implementing the multi-stage build. It greatly reduces our size
-# it also won't expose our code in our container as we will only copy
-# the build output from the first stage.
+# Copy the build output from the first stage
+COPY --from=BUILD_IMAGE /app/dist/ .
 
+# Expose the port the server will run on
+EXPOSE 80
 
-# beginning of second stage
-FROM node:18-alpine as PRODUCTION_IMAGE
-WORKDIR /app/react-app
-
-# Here, we are copying /app/react-app/dist folder from BUILD_IMAGE to
-# /app/react-app/dist in this stage.
-
-# Why dist folder ????
-# When we run npm run build, vite will generate dist directory that contains
-# our build files.
-COPY --from=BUILD_IMAGE /app/react-app/dist/ /app/react-app/dist/
-EXPOSE 8080
-
-# to run npm commands as: npm run preview ,
-# we need package.json
-COPY package.json .
-COPY vite.config.js .
-
-EXPOSE 8080
-CMD ["npm", "run", "preview"]
+# No CMD needed since nginx already has an entrypoint
