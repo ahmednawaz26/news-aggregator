@@ -53,3 +53,12 @@ sudo docker rm vite-react-app-container
 
 ### Configuration
 You can configure the application by modifying the .env file in the root directory. Ensure you have the necessary API keys and configurations for the news APIs you are using.
+
+### Screenshots
+![WhatsApp Image 2024-08-24 at 15 52 53](https://github.com/user-attachments/assets/774ded15-5ec1-431e-badb-47187ff13238)
+
+![WhatsApp Image 2024-08-24 at 15 53 08](https://github.com/user-attachments/assets/3d48f057-8fe6-46d5-b2c1-83b4dbd1e9e3)
+
+![WhatsApp Image 2024-08-24 at 15 54 28](https://github.com/user-attachments/assets/cc8dfd3a-e72a-414b-8f25-57def02d4cb4)
+
+![WhatsApp Image 2024-08-24 at 15 53 34](https://github.com/user-attachments/assets/b042ea44-843f-4c0f-8563-046dc358c71d)
