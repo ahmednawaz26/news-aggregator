@@ -23,6 +23,29 @@ cd news-aggregator
 ### Install Dependencies
 npm install
 
+### Environment Variables
+Before running the application, you'll need to set up environment variables. These variables are essential for configuring the application, including API keys for the news services.
+
+1. Creating the .env File
+
+Create a .env file in the root directory of your project:
+
+touch .env
+
+2. Open the .env file and add the following environment variables:
+
+VITE_NEWS_API_KEY=<your-news-api-key>
+VITE_NYT_API_KEY=<your-the-new-york-times-news-api-key>
+VITE_GUARDIAN_API_KEY=<your-the-guardian-news-api-key>
+
+Replace <your-news-api-key>, <your-the-new-york-times-news-api-key> and <your-the-guardian-news-api-key> with your actual API keys.
+
+Example .env File
+
+VITE_NEWS_API_KEY=0ce387109a2a4f570998fezhfd47qm10
+VITE_NYT_API_KEY=c3dJdRm1q240e6Hpzb4QHZ9FrPqPn1FC
+VITE_GUARDIAN_API_KEY=239fd9x9-b33e-4e50-93tg-fd8887530f5b
+
 ### Running the Application
 
 ### Local Development
