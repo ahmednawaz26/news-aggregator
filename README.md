@@ -36,13 +36,13 @@ touch .env
 
 2. Open the .env file and add the following environment variables:
 
-VITE_NEWS_API_KEY=<your-news-api-key>
+VITE_NEWS_API_KEY=your-news-api-key
 
-VITE_NYT_API_KEY=<your-the-new-york-times-news-api-key>
+VITE_NYT_API_KEY=your-the-new-york-times-news-api-key
 
-VITE_GUARDIAN_API_KEY=<your-the-guardian-news-api-key>
+VITE_GUARDIAN_API_KEY=your-the-guardian-news-api-key
 
-Replace <your-news-api-key>, <your-the-new-york-times-news-api-key> and <your-the-guardian-news-api-key> with your actual API keys.
+Replace your-news-api-key, your-the-new-york-times-news-api-key and your-the-guardian-news-api-key with your actual API keys.
 
 Example .env File
 
