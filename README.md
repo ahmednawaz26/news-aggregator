@@ -4,11 +4,11 @@
 A news aggregator website built using React.js. This project features article search and filtering, a personalized news feed, and integration with multiple news APIs. The application is also containerized using Docker for easy deployment.
 
 ## Features
-Article search and filtering
-Personalized news feed
-Mobile-responsive design
-Integration with at least three news APIs
-Dockerized for easy deployment
+- Article search and filtering
+- Personalized news feed
+- Mobile-responsive design
+- Integration with at least three news APIs
+- Dockerized for easy deployment
 
 ## Installation
 
